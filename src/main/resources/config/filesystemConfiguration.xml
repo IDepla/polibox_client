@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filesystem-setting>
+	<directory>
+		sharingFolder
+	</directory>
+	<scheduled-period>
+		2000
+	</scheduled-period>
+</filesystem-setting>

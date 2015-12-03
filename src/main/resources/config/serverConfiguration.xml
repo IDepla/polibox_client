@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server-setting>
+	<host>
+		https://localhost:8443/polibox
+	</host>
+	<user>11</user>
+	<device>30</device>
+	<passcode>$2a$10$iEjaQK4KCF39q7yAgjlimOxALC2E84Jl1occBHQF8khP41j5alLOS</passcode>
+</server-setting>

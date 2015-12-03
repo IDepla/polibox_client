@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	<class
+		name="it.polito.ai.polibox.client.filesystem.config.impl.FolderMonitorConfig">
+		<map-to xml="filesystem-setting" />
+		<field name="folder" type="java.lang.String">
+			<bind-xml name="directory" node="element" />
+		</field>
+		
+		<field name="schedulePeriod" type="long">
+			<bind-xml name="scheduled-period" node="element" />
+		</field>
+	</class>
+	<class name="it.polito.ai.polibox.client.http.config.impl.ServerConfig">
+		<map-to xml="server-setting" />
+		<field name="host" type="java.lang.String">
+			<bind-xml name="host" node="element" />
+		</field>
+
+		<field name="user" type="java.lang.String">
+			<bind-xml name="user" node="element" />
+		</field>
+		
+		<field name="device" type="java.lang.String">
+			<bind-xml name="device" node="element" />
+		</field>
+		
+		<field name="passcode" type="java.lang.String">
+			<bind-xml name="passcode" node="element" />
+		</field>
+	</class>
+	<class
+		name="it.polito.ai.polibox.client.notification.config.impl.NotificationOptions">
+		<map-to xml="notification-setting" />
+		<field name="notifications"
+			type="it.polito.ai.polibox.client.notification.config.impl.NotificationOption"
+			collection="arraylist" container="false">
+			<bind-xml name="notification-options" node="element"/>
+		</field>
+		<field name="notificationNumber" type="integer">
+			<bind-xml name="number" node="element"/>
+		</field>
+	</class>
+	<class
+		name="it.polito.ai.polibox.client.notification.config.impl.NotificationOption">
+		<map-to xml="notification-option" />
+
+		<field name="description" type="java.lang.String">
+			<bind-xml name="description" node="element" />
+		</field>
+		<field name="option" type="boolean">
+			<bind-xml name="option" node="attribute" />
+		</field>
+
+		<field name="id" type="java.lang.String">
+			<bind-xml name="id" node="element" />
+		</field>
+	</class>
+	<class name="it.polito.ai.polibox.client.notification.impl.Notifications">
+		<map-to xml="notifications"/>
+		<field name="notifications"
+			type="it.polito.ai.polibox.client.persistency.Notification"
+			collection="arraylist"  container="false">
+			<bind-xml name="notification" node="element"/>
+		</field>
+	</class>
+	<class name="it.polito.ai.polibox.client.persistency.Notification">
+		<field name="id" type="integer">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="code" type="integer">
+			<bind-xml name="code" node="attribute"/>
+		</field>
+		<field name="description" type="java.lang.String">
+			<bind-xml node="text"/>
+		</field>
+		<field name="creationTime" type="date">
+			<bind-xml name="creation" node="attribute"/>
+		</field>
+	</class>
+	<class name="it.polito.ai.polibox.client.filesystem.impl.FileMap">
+		<map-to xml="files"/>
+		<field name="myResources"
+			type="it.polito.ai.polibox.client.persistency.Resource"
+			collection="arraylist" container="false">
+			<bind-xml name="my" node="element"/>
+		</field>
+		<field name="sharedWithMeResources"
+			type="it.polito.ai.polibox.client.persistency.Resource"
+			collection="arraylist" container="false">
+			<bind-xml name="withme" node="element"/>
+		</field>
+	</class>
+	<class name="it.polito.ai.polibox.client.persistency.Resource">
+		<field name="id" type="integer">
+			<bind-xml name="id" node="attribute"/>
+		</field>
+		<field name="parent" type="integer">
+			<bind-xml name="parent" node="attribute"/>
+		</field>
+		<field name="version" type="integer">
+			<bind-xml name="version" node="attribute"/>
+		</field>
+		<field name="owner" type="integer">
+			<bind-xml name="owner" node="attribute"/>
+		</field>
+		<field name="directory" type="boolean">
+			<bind-xml name="directory" node="attribute"/>
+		</field>
+		<field name="deleted" type="boolean">
+			<bind-xml name="deleted" node="attribute"/>
+		</field>
+		<field name="writingLock" type="boolean">
+			<bind-xml name="writing-lock" node="attribute"/>
+		</field>
+		<field name="toSynchronize" type="boolean">
+			<bind-xml name="to-synchronize" node="attribute"/>
+		</field>
+		<field name="chunkNumber" type="integer">
+			<bind-xml name="chunk-number" node="attribute"/>
+		</field>
+		<field name="size" type="integer">
+			<bind-xml name="size" node="attribute"/>
+		</field>
+		<field name="name" type="java.lang.String">
+			<bind-xml name="name" node="element"/>
+		</field>
+		<field name="mime" type="java.lang.String">
+			<bind-xml name="mime" node="element"/>
+		</field>
+		<field name="creationTime" type="date">
+			<bind-xml name="creation-time" node="element"/>
+		</field>
+		<field name="hdLastModify" type="date">
+			<bind-xml name="last-modify-hd" node="element"/>
+		</field>
+		<field name="serverLastModify" type="date">
+			<bind-xml name="last-modify-server" node="element"/>
+		</field>
+		<field name="digest" type="java.lang.String">
+			<bind-xml name="digest" node="element"/>
+		</field>
+		<field name="inode" type="java.lang.String">
+			<bind-xml name="inode" node="element"/>
+		</field>
+	</class>
+</mapping>

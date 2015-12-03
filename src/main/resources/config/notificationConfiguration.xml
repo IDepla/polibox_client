@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notification-setting>
+<number>30</number>
+<notification-options>
+		<notification-option option="true">
+			<description>account creato</description>
+			<id>500</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>email modificata</description>
+			<id>501</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>notifiche email modificate</description>
+			<id>505</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>password modificata</description>
+			<id>502</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>dettagli personali modificati</description>
+			<id>504</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>account recuperato</description>
+			<id>503</id>
+		</notification-option>
+		<notification-option option="false">
+			<description>condivisione accettata</description>
+			<id>108</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>condivisione cancellata</description>
+			<id>150</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>condivisione modificata</description>
+			<id>130</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>richiesta condivisione</description>
+			<id>203</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>conflitto di modifica</description>
+			<id>108</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>device cancellato</description>
+			<id>304</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>device collegato</description>
+			<id>303</id>
+		</notification-option>
+		<notification-option option="false">
+			<description>device creato</description>
+			<id>313</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>opzioni di notifica device modificate</description>
+			<id>314</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>device rinominato</description>
+			<id>315</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>device scollegato</description>
+			<id>305</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>directory cancellata</description>
+			<id>111</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>directory creata</description>
+			<id>110</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>directory rinominata</description>
+			<id>112</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>file cancellato</description>
+			<id>104</id>
+		</notification-option>
+		<notification-option option="false">
+			<description>file creato</description>
+			<id>105</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>file modificato</description>
+			<id>103</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>file rinominato</description>
+			<id>113</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>risorsa ripristinata da cestino</description>
+			<id>107</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>risorsa ripristinata da history</description>
+			<id>106</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>risorsa spostata in cestino</description>
+			<id>120</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>risorse sincronizzate</description>
+			<id>109</id>
+		</notification-option>
+		<notification-option option="false">
+			<description>spazio sul server in esaurimento</description>
+			<id>403</id>
+		</notification-option>
+		<notification-option option="true">
+			<description>spazio sul server insufficiente</description>
+			<id>404</id>
+		</notification-option>
+</notification-options>
+</notification-setting>

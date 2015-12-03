@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+ 
+<installation version="5.0"  
+			  xmlns="http://izpack.org/schema/installation"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+  
+  <info>
+    <appname>${project.name}</appname>
+    <appversion>${project.version}</appversion>
+    <uninstaller write="yes" />
+    <javaversion>1.7</javaversion>
+ 	<url>https://localhost:8080/polibox</url>
+    <pack200 />
+    <authors>
+    	<author name="Igor Deplano" email="igor.deplano@gmail.com"/>
+  	</authors>
+  </info>
+ 
+  <guiprefs resizable="no" width="800" height="600">
+    <laf name="looks">
+      <param name="variant" value="windows" />
+      <os family="windows" />
+    </laf>
+  </guiprefs>
+ 
+  <locale>
+    <langpack iso3="eng" />
+    <langpack iso3="ita" />
+  </locale>
+ 
+  <panels>
+    <panel classname="HelloPanel" />
+    <panel classname="TargetPanel"/>        
+    <panel classname="InstallPanel"/>        
+    <panel classname="FinishPanel" />
+  </panels>
+ 
+  <packs>
+    <pack name="main" required="yes" installGroups="New Application">
+      <description>Add compiled package</description>
+      <file targetdir="${INSTALL_PATH}" src="./output/${project.build.finalName}-packaging.jar"></file>
+    </pack>
+    
+    <pack name="Post-Install Tasks" required="yes">
+    	<description>aggiunge i file </description>
+    	<fileset dir="./install/run/" targetdir="${INSTALL_PATH}">
+    		<os family="unix"/>
+    		<include name="run.sh"/>
+    		<include name="config.sh"/>
+    	</fileset>
+    	<executable targetfile="${INSTALL_PATH}/config.sh" stage="postinstall">
+    		<args>
+    			<arg value="${INSTALL_PATH}"/>
+    		</args>
+    	 	<os family="unix"/>
+    	</executable>
+    </pack>
+    
+    
+  </packs>
+ 	
+ 	
+ 
+</installation>

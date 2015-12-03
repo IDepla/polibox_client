@@ -1,0 +1,60 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+  
+ 
+  
+  <id>packaging</id>
+  <formats>
+  	<format>jar</format>
+  </formats>
+  
+  <includeBaseDirectory>false</includeBaseDirectory>
+  
+  <fileSets>
+    <fileSet>
+      <outputDirectory>./config</outputDirectory>
+      <directory>target/staging/config</directory>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>./img</outputDirectory>
+      <directory>target/staging/img</directory>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>./install</outputDirectory>
+      <directory>target/staging/install</directory>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>./spring</outputDirectory>
+      <directory>target/staging/spring</directory>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>./i18n</outputDirectory>
+      <directory>target/staging/i18n</directory>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>./xml</outputDirectory>
+      <directory>target/staging/xml</directory>
+    </fileSet>
+  </fileSets>
+  
+  <files>
+  	<file>
+  		<outputDirectory>.</outputDirectory>
+  		<source>target/staging/output/polibox-client.jar</source>
+  	</file>
+  </files>
+  
+  <dependencySets>
+  	<dependencySet>
+  		<outputDirectory>./lib</outputDirectory>
+  		<excludes>
+  			<exclude>*maven*:*</exclude>
+  			<exclude>*:*maven*</exclude>
+  			<exclude>org.codehaus.izpack:*</exclude>
+  			<exclude>*polibox*:*</exclude>
+  		</excludes>
+  	</dependencySet>
+  </dependencySets>
+  
+</assembly>

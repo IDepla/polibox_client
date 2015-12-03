@@ -1,0 +1,18 @@
+#!/bin/bash
+cd $1
+chmod a+x ${project.build.finalName}-packaging.jar
+chmod a+x run.sh
+
+#unpack jar
+jar xf ${project.build.finalName}-packaging.jar
+
+rm ${project.build.finalName}-packaging.jar
+rm -R install
+rm -R META-INF
+
+mkdir sharingFolder
+mkdir sharingFolder/my
+mkdir sharingFolder/withMe
+mkdir sharingFolder/tmp
+
+
